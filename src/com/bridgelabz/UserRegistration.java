@@ -9,7 +9,7 @@ public class UserRegistration {
 	private static final String LAST_NAME_REGEX = "^[A-Z][a-z]{2,}";
 	private static final String EMAIL_REGEX = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+[a-z]+$";
 	private static final String PHONE_NUMBER_REGEX = "^[789][0-9]{9}";
-	private static final String PASSWORD_REGEX = "^[0-9 a-z A-Z @#$%^&-+=]{8,}$";
+	private static final String PASSWORD_REGEX = "(?=.*[A-Z])[A-Za-z]{8,}$";
 	
 	public void register(UserDetails userDetail) {
 
