@@ -6,18 +6,19 @@ public class UserDetails {
 	private String lastName;
 	private String email;
 	private String phoneNumber;
+	private String password;
 
-	
 	public UserDetails(String firstName) {
 		
 	}
-	public UserDetails(String firstName,String lastName, String email, String phoneNumber) {
+	public UserDetails(String firstName,String lastName, String email, String phoneNumber, String password) {
 		
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
+		this.password = password;
 	}
 
 	public String getFirstName() {
@@ -46,5 +47,12 @@ public class UserDetails {
 	}
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
