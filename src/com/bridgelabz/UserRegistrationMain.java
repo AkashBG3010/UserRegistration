@@ -10,10 +10,13 @@ public class UserRegistrationMain {
 		String firstName = scanner.next();
 		System.out.println("Please enter Your Last Name: ");
 		String lastName = scanner.next();
+		System.out.println("Please enter your E-mail: ");
+		String email = scanner.next();
 		
 		UserDetails userDetails = new UserDetails(firstName);
 		userDetails.setFirstName(firstName);
 		userDetails.setLastName(lastName);
+		userDetails.setEmail(email);
 		
 		UserRegistration registration = new UserRegistration();
 		registration.register(userDetails);
