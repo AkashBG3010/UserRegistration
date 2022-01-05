@@ -8,18 +8,20 @@ public class UserRegistration {
 	private static final String FIRST_NAME_REGEX = "^[A-Z][a-z]{2,}";
 	private static final String LAST_NAME_REGEX = "^[A-Z][a-z]{2,}";
 	private static final String EMAIL_REGEX = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+[a-z]+$";
+	private static final String PHONE_NUMBER_REGEX = "^[789][0-9]{9}";
 	
 	public void register(UserDetails userDetail) {
 
 		boolean isFirstNameValid = validateUserDetails(FIRST_NAME_REGEX,userDetail.getFirstName());
 		boolean isLastNameValid = validateUserDetails(LAST_NAME_REGEX,userDetail.getLastName());
 		boolean isEmailValid = validateUserDetails(EMAIL_REGEX,userDetail.getEmail());
+		boolean isPhoneNumberValid = validateUserDetails(PHONE_NUMBER_REGEX,userDetail.getPhoneNumber());
 		
-		if(isFirstNameValid && isLastNameValid && isEmailValid) {
+		if(isFirstNameValid && isLastNameValid && isEmailValid && isPhoneNumberValid) {
 			System.out.println("Entered details are valid");
 		}
 		else {
-			System.out.println("Entered name or the Email is invalid. Please try again!");
+			System.out.println("Entered Name (or) Email (or) PhoneNumber is invalid. Please try again!");
 		}
 	}
 	private boolean validateUserDetails(String regex, String dataToBeValidated) {
